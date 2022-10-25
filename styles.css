@@ -20,18 +20,18 @@ body {
 
 
 
-
+/* -----circle-----   */
 
 .circle__box {
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
+    width: 6.25vh;       /* 6.25 */
+    height: 6.25vh;      /* 6.25 */
+    /*margin: 1.5625vh auto;  /* 1.5625 */
     position: relative;
   }
   
   .circle__wrapper {
-    width: 100px;
-    height: 200px;
+    width: 3.125vh;       /* 3.125 */
+    height: 6.25vh;      /* 6.25 */
     position: absolute;
     top: 0;
     overflow: hidden;
@@ -46,9 +46,9 @@ body {
   }
   
   .circle__whole {
-    width: 160px;
-    height: 160px;
-    border: 20px solid transparent;
+    width: 5vh;       /* 5 */
+    height: 5vh;      /* 5 */
+    border: 0.625vh solid transparent;     /* 0.625 */
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -56,17 +56,17 @@ body {
   }
   
   .circle__right {
-    border-top: 20px solid teal;
-    border-right: 20px solid teal;
-    right: 1px;
-    animation: circleRight 5s linear forwards;
+    border-top: 0.625vh solid blue;        /* 0.625 */
+    border-right: 0.625vh solid blue;      /* 0.625 */
+    right: 0.03125vh;                             /* 0.03125 */
+    animation: circleRight 0.5s linear forwards;
   }
   
   .circle__left {
-    border-bottom: 20px solid teal;
-    border-left: 20px solid teal;
-    left: 1px;
-    animation: circleLeft 5s linear forwards;
+    border-bottom: 0.625vh solid blue;     /* 0.625 */
+    border-left: 0.625vh solid blue;       /* 0.625 */
+    left: 0.03125vh;                              /* 0.03125 */
+    animation: circleLeft 0.5s linear forwards;
   }
   
   @keyframes circleRight {
@@ -88,3 +88,57 @@ body {
       -webkit-transform: rotate(45deg);
     }
   }
+
+
+
+
+
+
+/* -----cross----- */
+
+.line__box {
+    width: 6.25vh;       /* 6.25 */
+    height: 6.25vh;      /* 6.25 */
+    /*margin: 1.5625vh auto;  /* 1.5625 */
+    position: absolute;
+  }
+
+
+.line__wrapper {
+    width: 6.25vh;       /* 3.125 */
+    height: 6.25vh;      /* 6.25 */
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+
+
+
+.line-left {
+    height:2px;
+    width:0;
+    margin-top: 6.25vh;    /*100px*/
+    background:red;
+    transform:rotate(-45deg);
+    transform-origin:left;
+    animation:grow 0.5s linear forwards;
+  }
+
+.line-right {
+    position: relative;
+
+    height:2px;
+    width:0;
+    margin-top: 6.25vh;    /*100px*/
+    background:red;
+    transform:rotate(45deg);
+    transform-origin:right;
+    animation:grow 0.5s linear forwards;
+  }
+
+
+
+  @keyframes grow{
+    to {width:8.84vh;}
+  }
+
