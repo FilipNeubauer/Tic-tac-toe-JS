@@ -1,13 +1,18 @@
 
 
+var gameField = Array(10);
+for (let i = 0; i < 10; i++) {
+    gameField[i] = Array(10).fill(0);
+}
+
+var freeBox = [...Array(100).keys()];
+
+
+console.log(gameField);
+
 function setTheGame() {
-    const gameField = Array(10);
-    for (let i = 0; i < 10; i++) {
-        gameField[i] = Array(10);
-    }
 
-
-
+    // console.log(freeBox);
 
     var str = "auto ";
     var numOfCol = str.repeat(10);
@@ -45,8 +50,54 @@ function cross(gridId) {
 }
 
 
+function computerMove() {
+  let rndId = freeBox[Math.floor(Math.random()*freeBox.length)]
+
+  freeBox.splice(freeBox.indexOf(rndId), 1);
+
+  let rowId = Math.floor(rndId/10);
+
+  let colId = rndId%10;
+
+  gameField[rowId][colId] = "X";
+
+
+  cross(rndId);
+
+  // console.log(rndId);
+  // console.log(freeBox);
+  // console.log(gameField);
+}
+
+
+function playerMove() {
+  $(".grid-item").click(function () {
+    // console.log(this.id);
+    // console.log(freeBox);
+
+    let idBox = parseInt(this.id);
+    // console.log(idBox);
+    if (freeBox.includes(idBox)) {
+      circle(idBox);
+      freeBox.splice(freeBox.indexOf(idBox), 1);
+      // console.log(freeBox);
+
+      let rowId = Math.floor(idBox/10);
+
+      let colId = idBox%10;
+    
+      gameField[rowId][colId] = "X";
+
+    } else {
+      console.log("error");
+    }
+  })
+}
+
+
 setTheGame();
 makeDivs();
 
+computerMove();
 
-
+playerMove();
