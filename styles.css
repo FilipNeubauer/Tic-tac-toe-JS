@@ -97,10 +97,10 @@ body {
 /* -----cross----- */
 
 .line__box {
-    width: 6.25vh;       /* 6.25 */
-    height: 6.25vh;      /* 6.25 */
+    width: 6.25vh;       
+    height: 6.25vh;      
     /*margin: 1.5625vh auto;  /* 1.5625 */
-    position: absolute;
+    position: relative;
   }
 
 
@@ -115,30 +115,32 @@ body {
 
 
 .line-left {
+    position: absolute;
     height:2px;
     width:0;
     margin-top: 6.25vh;    /*100px*/
     background:red;
     transform:rotate(-45deg);
     transform-origin:left;
-    animation:grow 0.5s linear forwards;
+    animation:grow 0.25s linear forwards;
   }
 
 .line-right {
-    position: relative;
+    position: absolute;
 
     height:2px;
     width:0;
+    right: 0vh;
     margin-top: 6.25vh;    /*100px*/
     background:red;
     transform:rotate(45deg);
     transform-origin:right;
-    animation:grow 0.5s linear forwards;
+    animation:grow 0.25s 0.25s linear forwards;
   }
 
 
 
-  @keyframes grow{
-    to {width:8.84vh;}
-  }
+@keyframes grow{
+  to {width:8.9vh;}
+}
 

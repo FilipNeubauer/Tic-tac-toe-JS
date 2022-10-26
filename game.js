@@ -35,8 +35,18 @@ function circle(gridId) {
 }
 
 
+function cross(gridId) {
+  $("#" + gridId.toString()).html('<did class="line__box">\
+  <div class="line__wrapper">\
+      <div class="line-left"></div>\
+      <div class="line-right"></div>\
+  </div>\
+</div>')
+}
 
 
 setTheGame();
 makeDivs();
+
+
 
