@@ -16,6 +16,23 @@ body {
 }
 
 
+.x-button {
+  height: 6.25vh;
+  width: 6.25vh;
+  margin: 1vh 6vh 1vh;
+  font-size: 3vh;
+  color: red;
+}
+
+.o-button {
+  height: 6.25vh;
+  width: 6.25vh;
+  margin: 1vh 6vh 1vh;
+  font-size: 3vh;
+  color: blue;
+}
+
+
 
 
 
@@ -116,7 +133,7 @@ body {
 
 .line-left {
     position: absolute;
-    height:2px;
+    height:0.625vh;
     width:0;
     margin-top: 6.25vh;    /*100px*/
     background:red;
@@ -128,7 +145,7 @@ body {
 .line-right {
     position: absolute;
 
-    height:2px;
+    height:0.625vh;
     width:0;
     right: 0vh;
     margin-top: 6.25vh;    /*100px*/
