@@ -1,7 +1,6 @@
 
 const numBox = 10;
 
-var state = true;
 
 var you = null;
 var computer = null;
@@ -132,6 +131,8 @@ function playerMove() {
         } else {
           console.log("draw");
           $("h1").html("Draw!");
+          restartGame();
+
         }
       }
 
@@ -166,6 +167,7 @@ function checkGame(x, y, symbol) {
     console.log(symbol + " won!");
 
     $("h1").html(symbol + " won!")
+    restartGame();
 
     return true;
 
@@ -334,6 +336,39 @@ function chooseSymbol() {
     $("h2").html("You are o");
     $("h2").css("color", "blue");
   game();
+
+  })
+}
+
+
+function restartGame() {
+  $(".restart").css("visibility", "visible");
+  $(".restart").click(function() {
+    $(".restart").css("visibility", "hidden");
+    $("#grid-container").empty();
+    you = null;
+    computer = null;
+
+    gameField = Array(10);
+    for (let i = 0; i < numBox; i++) {
+        gameField[i] = Array(numBox).fill(0);
+    }
+
+    freeBox = [...Array(numBox*numBox).keys()];
+
+
+    setTheGame();
+    makeDivs();
+
+    $("h1").html("Tic tac toe");
+
+    $(".btns-div").css("visibility", "visible");
+    $("h2").html("Choose your symbol");
+    $("h2").css("color", "black");
+
+
+    // console.log(freeBox);
+    // console.log(gameField);
 
   })
 }

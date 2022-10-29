@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
 }
 
 #grid-container {
@@ -33,7 +36,50 @@ body {
 }
 
 
+.restart {
+  visibility: hidden;
+  height: 17vh;
+  width: 37vh;
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 50vh;
+  left: 50vw;
+  /* margin-bottom: 10vh; */
+  margin-left: -17.5vh;
+  font-size: 7vh;
+  text-align: center;
+  line-height: 17vh;
+}
 
+h2 {
+  margin: 0;
+  font-size: 3vh;
+  padding: 0 0 1vh;
+}
+
+h1 {
+  padding: 5vh 0 3vh;
+  font-size: 5vh;
+  margin: 0;
+}
+
+#footer {
+  padding: 3vh 0 3vh;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 2vh;
+  padding: 0 0 1vh;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.git-hub {
+  text-decoration: none;
+  color: grey;
+}
 
 
 
